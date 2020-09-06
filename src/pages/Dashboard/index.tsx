@@ -46,12 +46,12 @@ const Dashboard: React.FC = () => {
         }),
       );
       setTransactions(transactionsFormatted);
+      const balanceResponse = response.data.balance;
       const balanceFormatted = {
-        income: formatValue(response.data.balance.income),
-        outcome: formatValue(response.data.balance.outcome),
-        total: formatValue(response.data.balance.total),
+        income: formatValue(balanceResponse.income),
+        outcome: formatValue(balanceResponse.outcome),
+        total: formatValue(balanceResponse.total),
       };
-
       setBalance(balanceFormatted);
     }
 
